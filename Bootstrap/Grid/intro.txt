@@ -1,0 +1,103 @@
+Getting Started with Bootstrap
+Creating a website from scratch can take a lot of work and require a working knowledge of HTML, CSS, and maybe some JavaScript. But with Bootstrap, the amount of work and prior knowledge is reduced.
+
+Bootstrap is a framework of readily available code that integrates with HTML to create stylized websites that adapt the layout to users’ screen sizes. This framework allows us to cut down on the time needed to style a website, simplifies the complexity of how to layout elements, works across multiple browsers, and reduces the frustration of using plain CSS. All it takes to use Bootstrap is a few additional lines in our HTML document.
+
+In this lesson, we’ll be working with Bootstrap 4. To incorporate Bootstrap into a project, we have to include two <meta> tags and the Bootstrap CSS library. In the example below, Bootstrap is linked via Content Delivery Network (CDN) in the <head> element, like so:
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS for styling and layout-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+There are also some optional JavaScript libraries if we want to add some interactivity to our website and these are inserted at the end of our <body> element. Check out Bootstrap’s Getting Started documentation for more insight. We’ve also added the optional JavaScript links in the code editor.
+
+If you’re ready, strap on those boots and let’s get started!
+
+Instructions
+1.
+Look over the structure of the HTML document in the code editor and take notice of the <meta> tags in the header and the <script> elements at the bottom of the <body>. We’ve also included elements that use Bootstrap’s styling and layout, but we haven’t added in the link to Bootstrap’s CDN.
+
+Paste the following line of code inside the <head> element:
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+Once you finish, notice how Bootstrap transforms the webpage! Go ahead resize the browser bigger and smaller to see how Bootstrap displays content on different sized screens!
+
+Make sure that you’ve copied and pasted the line provided inside the <head> element. Look at the example provided in the narrative or check out the Bootstrap documentation.
+
+Intro to the Grid
+Bootstrap simplifies the layout of a website using a grid system. For us to fully take advantage of Bootstrap’s grid system, we need to understand how to structure our HTML.
+
+At the heart of it, containers are the basis of Bootstrap’s grid. Inside containers, we nest rows as immediate children. Then, nested inside rows are columns. Inside columns, we put our actual content. Take a look below at an example of this nesting pattern. Don’t worry about the syntax of rows and columns just yet, but do take note of how our HTML is organized:
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <!-- A column inside a row inside a container! -->
+    </div>
+  </div>
+</div>
+We can gain even more control of our layout once we start nesting rows inside columns and setting widths for our columns! But, first, let’s review how to create a layout using Bootstrap.
+
+Instructions
+Take a look at the provided diagram and key — container, rows, columns are color coded.
+
+The Basic Layout shows the fundamental structure. The Nested Layers shows how to build a more complex layout by nesting rows inside a column. Lastly, the Entire Webpage shows how a webpage can be laid out as a system of containers, rows, and columns.
+
+Bootstrap uses a grid system based on CSS Flexbox which organizes content in rows or columns. As seen in the previous exercise, Bootstrap also uses rows and columns and in this exercise we’ll learn about the essential Bootstrap container. Using the Bootstrap grid also allows for responsive design, in other words, a website’s layout can change based on the user’s screen size. Read more about grid at Bootstrap’s grid documentation.
+
+Bootstrap uses classes to apply CSS rulesets — these rulesets dictate the layout and styling of the element. To create a container, necessary for Bootstrap’s grid, we assign a class of "container" to a <div> like so:
+
+<div class="container"></div>
+The <div> from the example above becomes a Bootstrap container which has a width relative to a user’s screen size, becomes horizontally centered, and has a left and right margin.
+
+If we wanted the container to take up the entire width of the screen we can assign a class of "container-fluid":
+
+<div class="container-fluid"></div>
+Knowing how to use documentation is important. We can always check what classes to add using Bootstrap’s grid documentation.
+
+Note: the Bootstrap site uses CSS notation for classes, which entails having a . before a class name like .example-class-name.
+
+Instructions
+1.
+Note that we’ve added some styling in a local CSS file, style.css to add a background color, a border, and a font color to the <div>s without adding more Bootstrap classes. This will be a common theme in the following exercises. We’ve given containers a solid black border and a teal/green background color.
+
+In index.html there are two <div>s in the <body>. Add a class of "container" to the first <div>. Run your code to see how size of the container changes.
+
+Make sure you assign the class to the first <div>. Check the code in the narrative or Bootstrap’s documentation for syntax help.
+
+2.
+Assign the second <div> a class of "container-fluid" to see how it compares to the first <div>.
+
+You will have to resize the browser to see a noticeable difference. To resize the browser, you can click and drag the left edge of the browser or click on the expand icon: expand icon.
+
+Rows
+Now that we have an understanding of how the layout works in Bootstrap and how to use containers, let’s focus our attention to rows.
+
+As mentioned in the previous exercise, rows are nested within containers. Also, we can add as many rows as we want inside a container. By default, a row will take up the entire width of its parent container. To create a row we assign a class of "row" to an element. Take a look at the provided example with a nested row inside a container:
+
+<div class="container">
+  <div class="row">
+  </div>
+</div>
+Let’s now add some rows to our web page!
+
+Instructions
+1.
+We’ve added some color to the container and rows that are on the web page to differentiate between the container and row elements. We’ve given rows an orange background color and a solid yellow border.
+
+Inside the container, add two <div>s and make both elements rows.
+
+Add some content, like text, inside the <div>s to give the <div>s some height!
+
+
+Hint
+To create a row, add class of "row" to an element like so:
+
+<div class="row">
+  <p>Any text is fine!</p>
+</div>
+Just like the example has a <p> element, remember to add some text to give the <div>s some height.
